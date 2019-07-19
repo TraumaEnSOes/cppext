@@ -39,5 +39,12 @@ int main( ) {
 
   test.printNone( );
 
+  test.printStr.disconnect( &imp, &Do::printStr );
+  test.printStr( "cucu" );
+  test.printStr.disconnect( printStr );
+  test.printStr( "cucu" );
+
+  
+
   return 0;
 }
