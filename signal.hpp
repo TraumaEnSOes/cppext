@@ -28,6 +28,8 @@ protected:
   std::vector< Target > m_vector;
 
   SignalBase( ) = default;
+  SignalBase( const SignalBase & ) = delete;
+  SignalBase &operator=( const SignalBase & ) = delete;
 
   void reallyDisconnect( const Target &o ) {
     auto iter = std::find( m_vector.begin( ), m_vector.end( ), o );
